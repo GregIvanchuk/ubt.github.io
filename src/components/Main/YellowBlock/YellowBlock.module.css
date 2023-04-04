@@ -1,0 +1,30 @@
+.yellowBlock2{
+    color: #000;
+    padding-top: 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    background-color:   #fde910;
+  }
+  .yellowBlock2Content {
+    width: 300px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .yellowBlock2Content img {
+    filter: brightness(0) invert(0);
+  
+  }
+  .yellowBlock2Content h1 {
+    /* background-image: url(https://mebility.com.ua/product-category/mebel-v-nalichii/stoly-mebel-v-nalichii/konsolnye-stoly-stoly-mebel-v-nalichii/); замініть /path/to/image.jpg на шлях до вашого зображення */
+    /* background-clip: text;
+    -webkit-background-clip: text; /* для підтримки Safari та старіших браузерів */
+    /*color: transparent; */
+  font-size: 90px;
+    color: black;
+  }
+  

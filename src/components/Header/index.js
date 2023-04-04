@@ -1,5 +1,7 @@
 import styles from './Header.module.css';
 import React from "react";
+import { Helmet } from 'react-helmet';
+import {Link} from "react-router-dom";
 function Header() {
   let  [open,setOpen] = React.useState("true")
     let openHandler = () => {
@@ -8,17 +10,25 @@ function Header() {
   return (
     <>
       <header className={styles.header}>
+      <div className={styles.header_container}>
+      <Helmet>
+      <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet"/>
+    </Helmet>
         <div className={styles.leftHeader}>
-            <img width={30} height={30} src="/images/Vector.png" />
+            {/* <img width={30} height={30} src="/images/Vector.png" /> */}
             <div className={styles.store_title}>
-                <h3 className={styles.title_store}>UBT</h3>
-                {/* <p>Найкращий вибір вітамінів та спортивних добавок</p> */}
+                <h3 className={styles.title_store}>S.P. Studio</h3>
+                 <p>Architecture & Design</p> 
             </div>
         </div>
         <div className={open ? styles.menu : styles.menu + " " + styles.active }>
         <ul onClick={() => openHandler()} className={styles.rigthHeader}>
            <li>
-            <a>ГОЛОВНА</a>
+           <Link to="/">
+                    ГОЛОВНА
+                </Link>
             </li>
             <li>
             <a>ПОСЛУГИ</a>
@@ -36,6 +46,7 @@ function Header() {
         </div>
         <div onClick={() => openHandler()}  className={ open ? styles.burger :  styles.burger + " " + styles.active}>
         <span></span>
+      </div>
       </div>
     </header>
     </>
